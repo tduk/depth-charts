@@ -1,3 +1,17 @@
+#Instructions
+##Assumptions
+Unfortunately i didn't have chance to ask question so did following assumptions:
+- the `position` field in  the player model doesn't have any meaning
+- potential new 'sports' in a future will be different only by set of positions
+
+##Details:
+1. The main class for the assignment below is `com.sportsbet.depthcharts.manage.HashMapDepthChartMgr`
+
+2. Example of usage can be found in `com.sportsbet.depthcharts.App`
+
+3. To build use `mvn clean install`
+
+
 Please answer the below question to the best of your ability. If you have any questions do not hesitate to reach out to us for clarification. You may use any libraries you feel comfortable with to implement your solution. We've provided some basic scaffolding to get you started.
 
 # Depth Charts

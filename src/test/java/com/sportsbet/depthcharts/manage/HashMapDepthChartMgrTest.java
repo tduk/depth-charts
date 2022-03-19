@@ -62,6 +62,15 @@ public class HashMapDepthChartMgrTest {
     }
 
     @Test
+    public void addThrowsExceptionWhenAddingDuplicateToPosition() throws DepthChartException {
+        depthChartMgr.addPlayerToDepthChart(new Player(1, "player1"), "WR");
+
+        var exception = assertThrows(DepthChartException.class, () ->
+                depthChartMgr.addPlayerToDepthChart(new Player(1, "player1"), "WR"));
+        assertEquals("Player 'player1' already exists in position 'WR'", exception.getMessage());
+    }
+
+    @Test
     public void removesPlayerFromPosition() throws DepthChartException {
         depthChartMgr.addPlayerToDepthChart(new Player(1, "player1"), "WR");
         depthChartMgr.removePlayerFromDepthChart(new Player(1, "player1"), "WR");

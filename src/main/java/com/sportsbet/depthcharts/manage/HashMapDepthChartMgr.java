@@ -29,6 +29,10 @@ public class HashMapDepthChartMgr implements DepthChartMgr {
             throw new DepthChartException(String.format("Invalid depth %s, has to be less or equal than %s", positionDepth, players.size()));
         }
 
+        if(players.contains(player)){
+            throw new DepthChartException(String.format("Player '%s' already exists in position '%s'", player.getName(), position));
+        }
+
         players.add(positionDepth, player);
 
         chart.putIfAbsent(position, players);
